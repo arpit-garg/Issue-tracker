@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Issue Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Issue Tracker</h1>
+    <form id="issue-form">
+      <label for="issue-description">Issue Description:</label>
+      <textarea id="issue-description" name="issue-description" rows="5" required></textarea>
+
+      <label for="severity">Severity:</label>
+      <select id="severity" name="severity" required>
+        <option value="">Select Severity</option>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+
+      <label for="assigned-to">Assigned To:</label>
+      <input type="text" id="assigned-to" name="assigned-to" required>
+
+      <button type="submit">Add Issue</button>
+    </form>
+    <div id="display">
+        <ul id="displayIssues">
+        </ul>
+    </div>
+  </div>
+  <script src="https://chancejs.com/chance.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
